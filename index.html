@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="全面的人体器官健康保养指南 - 了解每个器官的功能、保养方法和预防措施">
+    <meta name="keywords" content="健康,器官保养,人体健康,养生,保健">
+    <title>人体器官健康保养指南 - 守护您的健康</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span class="logo-text">健康守护</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">首页</a></li>
+                    <li><a href="#organs" class="nav-link">器官指南</a></li>
+                    <li><a href="#tips" class="nav-link">养生建议</a></li>
+                    <li><a href="#about" class="nav-link">关于</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">人体器官健康保养指南</h1>
+                <p class="hero-subtitle">了解您的身体，呵护每一个器官，享受健康生活</p>
+                <a href="#organs" class="btn btn-primary">开始探索</a>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">主要器官</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">保养建议</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">365</div>
+                        <div class="stat-label">每日呵护</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organs" class="organs-section">
+            <div class="container">
+                <h2 class="section-title">人体器官健康指南</h2>
+                <p class="section-subtitle">全面了解人体各个器官的功能、保养方法与预防措施</p>
+
+                <div class="organs-filter">
+                    <button class="filter-btn active" data-category="all">全部器官</button>
+                    <button class="filter-btn" data-category="vital">重要器官</button>
+                    <button class="filter-btn" data-category="digestive">消化系统</button>
+                    <button class="filter-btn" data-category="respiratory">呼吸系统</button>
+                    <button class="filter-btn" data-category="sensory">感觉器官</button>
+                    <button class="filter-btn" data-category="endocrine">内分泌系统</button>
+                </div>
+
+                <div class="organs-grid">
+                    <!-- 心脏 -->
+                    <div class="organ-card" data-category="vital" data-organ="heart">
+                        <div class="organ-icon">❤️</div>
+                        <h3 class="organ-name">心脏</h3>
+                        <p class="organ-brief">生命的动力泵，维持血液循环</p>
+                        <button class="btn-detail" onclick="showOrganDetail('heart')">了解更多</button>
+                    </div>
+
+                    <!-- 大脑 -->
+                    <div class="organ-card" data-category="vital" data-organ="brain">
+                        <div class="organ-icon">🧠</div>
+                        <h3 class="organ-name">大脑</h3>
+                        <p class="organ-brief">思维与意识的中枢，控制全身活动</p>
+                        <button class="btn-detail" onclick="showOrganDetail('brain')">了解更多</button>
+                    </div>
+
+                    <!-- 肺 -->
+                    <div class="organ-card" data-category="respiratory" data-organ="lungs">
+                        <div class="organ-icon">🫁</div>
+                        <h3 class="organ-name">肺</h3>
+                        <p class="organ-brief">呼吸系统核心，气体交换场所</p>
+                        <button class="btn-detail" onclick="showOrganDetail('lungs')">了解更多</button>
+                    </div>
+
+                    <!-- 肝脏 -->
+                    <div class="organ-card" data-category="digestive" data-organ="liver">
+                        <div class="organ-icon">🫀</div>
+                        <h3 class="organ-name">肝脏</h3>
+                        <p class="organ-brief">人体化工厂，解毒代谢中心</p>
+                        <button class="btn-detail" onclick="showOrganDetail('liver')">了解更多</button>
+                    </div>
+
+                    <!-- 肾脏 -->
+                    <div class="organ-card" data-category="vital" data-organ="kidneys">
+                        <div class="organ-icon">🫘</div>
+                        <h3 class="organ-name">肾脏</h3>
+                        <p class="organ-brief">体内净化器，调节水电解质平衡</p>
+                        <button class="btn-detail" onclick="showOrganDetail('kidneys')">了解更多</button>
+                    </div>
+
+                    <!-- 胃 -->
+                    <div class="organ-card" data-category="digestive" data-organ="stomach">
+                        <div class="organ-icon">🫃</div>
+                        <h3 class="organ-name">胃</h3>
+                        <p class="organ-brief">消化食物的主要场所</p>
+                        <button class="btn-detail" onclick="showOrganDetail('stomach')">了解更多</button>
+                    </div>
+
+                    <!-- 肠道 -->
+                    <div class="organ-card" data-category="digestive" data-organ="intestines">
+                        <div class="organ-icon">🌀</div>
+                        <h3 class="organ-name">肠道</h3>
+                        <p class="organ-brief">营养吸收和免疫防线</p>
+                        <button class="btn-detail" onclick="showOrganDetail('intestines')">了解更多</button>
+                    </div>
+
+                    <!-- 眼睛 -->
+                    <div class="organ-card" data-category="sensory" data-organ="eyes">
+                        <div class="organ-icon">👁️</div>
+                        <h3 class="organ-name">眼睛</h3>
+                        <p class="organ-brief">视觉器官，心灵的窗户</p>
+                        <button class="btn-detail" onclick="showOrganDetail('eyes')">了解更多</button>
+                    </div>
+
+                    <!-- 耳朵 -->
+                    <div class="organ-card" data-category="sensory" data-organ="ears">
+                        <div class="organ-icon">👂</div>
+                        <h3 class="organ-name">耳朵</h3>
+                        <p class="organ-brief">听觉与平衡器官</p>
+                        <button class="btn-detail" onclick="showOrganDetail('ears')">了解更多</button>
+                    </div>
+
+                    <!-- 皮肤 -->
+                    <div class="organ-card" data-category="vital" data-organ="skin">
+                        <div class="organ-icon">🤲</div>
+                        <h3 class="organ-name">皮肤</h3>
+                        <p class="organ-brief">人体最大器官，保护屏障</p>
+                        <button class="btn-detail" onclick="showOrganDetail('skin')">了解更多</button>
+                    </div>
+
+                    <!-- 胰腺 -->
+                    <div class="organ-card" data-category="endocrine" data-organ="pancreas">
+                        <div class="organ-icon">🔬</div>
+                        <h3 class="organ-name">胰腺</h3>
+                        <p class="organ-brief">调节血糖和消化酶分泌</p>
+                        <button class="btn-detail" onclick="showOrganDetail('pancreas')">了解更多</button>
+                    </div>
+
+                    <!-- 甲状腺 -->
+                    <div class="organ-card" data-category="endocrine" data-organ="thyroid">
+                        <div class="organ-icon">🦋</div>
+                        <h3 class="organ-name">甲状腺</h3>
+                        <p class="organ-brief">代谢调控中心</p>
+                        <button class="btn-detail" onclick="showOrganDetail('thyroid')">了解更多</button>
+                    </div>
+
+                    <!-- 脾脏 -->
+                    <div class="organ-card" data-category="vital" data-organ="spleen">
+                        <div class="organ-icon">🩸</div>
+                        <h3 class="organ-name">脾脏</h3>
+                        <p class="organ-brief">免疫和造血功能</p>
+                        <button class="btn-detail" onclick="showOrganDetail('spleen')">了解更多</button>
+                    </div>
+
+                    <!-- 骨骼 -->
+                    <div class="organ-card" data-category="vital" data-organ="bones">
+                        <div class="organ-icon">🦴</div>
+                        <h3 class="organ-name">骨骼</h3>
+                        <p class="organ-brief">支撑身体，保护内脏</p>
+                        <button class="btn-detail" onclick="showOrganDetail('bones')">了解更多</button>
+                    </div>
+
+                    <!-- 肌肉 -->
+                    <div class="organ-card" data-category="vital" data-organ="muscles">
+                        <div class="organ-icon">💪</div>
+                        <h3 class="organ-name">肌肉</h3>
+                        <p class="organ-brief">运动系统核心</p>
+                        <button class="btn-detail" onclick="showOrganDetail('muscles')">了解更多</button>
+                    </div>
+
+                    <!-- 膀胱 -->
+                    <div class="organ-card" data-category="vital" data-organ="bladder">
+                        <div class="organ-icon">💧</div>
+                        <h3 class="organ-name">膀胱</h3>
+                        <p class="organ-brief">储存和排泄尿液</p>
+                        <button class="btn-detail" onclick="showOrganDetail('bladder')">了解更多</button>
+                    </div>
+
+                    <!-- 血管系统 -->
+                    <div class="organ-card" data-category="vital" data-organ="blood-vessels">
+                        <div class="organ-icon">🔴</div>
+                        <h3 class="organ-name">血管系统</h3>
+                        <p class="organ-brief">输送营养和氧气的管道</p>
+                        <button class="btn-detail" onclick="showOrganDetail('blood-vessels')">了解更多</button>
+                    </div>
+
+                    <!-- 淋巴系统 -->
+                    <div class="organ-card" data-category="vital" data-organ="lymphatic">
+                        <div class="organ-icon">🛡️</div>
+                        <h3 class="organ-name">淋巴系统</h3>
+                        <p class="organ-brief">免疫防御网络</p>
+                        <button class="btn-detail" onclick="showOrganDetail('lymphatic')">了解更多</button>
+                    </div>
+
+                    <!-- 牙齿 -->
+                    <div class="organ-card" data-category="digestive" data-organ="teeth">
+                        <div class="organ-icon">🦷</div>
+                        <h3 class="organ-name">牙齿</h3>
+                        <p class="organ-brief">咀嚼食物的第一道关卡</p>
+                        <button class="btn-detail" onclick="showOrganDetail('teeth')">了解更多</button>
+                    </div>
+
+                    <!-- 舌头 -->
+                    <div class="organ-card" data-category="sensory" data-organ="tongue">
+                        <div class="organ-icon">👅</div>
+                        <h3 class="organ-name">舌头</h3>
+                        <p class="organ-brief">味觉器官和语言辅助</p>
+                        <button class="btn-detail" onclick="showOrganDetail('tongue')">了解更多</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <h2 class="section-title">日常养生建议</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🥗</div>
+                        <h3>均衡饮食</h3>
+                        <p>多吃新鲜蔬果，适量摄入蛋白质，减少加工食品和高糖饮料</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🏃</div>
+                        <h3>规律运动</h3>
+                        <p>每周至少150分钟中等强度运动，增强心肺功能和免疫力</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">😴</div>
+                        <h3>充足睡眠</h3>
+                        <p>保证每天7-9小时优质睡眠，让身体充分休息和修复</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">💧</div>
+                        <h3>多喝水</h3>
+                        <p>每天饮水1.5-2升，促进新陈代谢，帮助排除毒素</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🧘</div>
+                        <h3>减压放松</h3>
+                        <p>学习冥想、瑜伽等放松技巧，保持心理健康</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🏥</div>
+                        <h3>定期体检</h3>
+                        <p>每年进行全面体检，及早发现和预防健康问题</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">关于本站</h2>
+                <div class="about-content">
+                    <p>本网站致力于提供全面、科学的人体器官健康保养知识，帮助大家了解自己的身体，学会科学的养生方法。</p>
+                    <p>健康是人生最宝贵的财富，让我们一起呵护身体的每一个器官，享受高质量的生活。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 人体器官健康保养指南. 关爱健康，从了解开始。</p>
+        </div>
+    </footer>
+
+    <!-- Modal for organ details -->
+    <div id="organModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
